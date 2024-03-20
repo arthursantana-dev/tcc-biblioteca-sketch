@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Button from "./Button";
 
 export default function Layout() {
 	return (
@@ -10,6 +11,7 @@ export default function Layout() {
 			<a href="/login">
 				Login
 			</a>
+			<Button title={"yeepee"} onClick={() => console.log('yepee')}/>
 			<Outlet/>
 		</div>
 	)
