@@ -16,3 +16,7 @@
 body {
   font-family: 'Figtree', sans-serif;
 }
+
+.button {
+  width: fit-content;
+}
