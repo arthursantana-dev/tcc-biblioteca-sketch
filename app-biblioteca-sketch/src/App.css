@@ -15,6 +15,19 @@
 
 body {
   font-family: 'Figtree', sans-serif;
+  background-color: var(--white-bg);
+}
+
+h1{
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+img.login__logo{
+  width: 17rem;
 }
 
 a.menu-link{
@@ -22,11 +35,26 @@ a.menu-link{
   font-size: 1.2rem;
 }
 
+aside.menu{
+  background-color: var(--main-blue);
+}
+
 a.menu-link--active{
   color: var(--input-font-color);
 }
 
+.container {
+  background-color: var(--white-container);
+}
+
 
 .button {
-  width: fit-content;
+  background-color: var(--main-blue);
+  color: var(--white-bg);
+}
+
+.button:hover {
+  
+  opacity: 0.9;
+  transition: 0.4s;
 }

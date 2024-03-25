@@ -14,7 +14,7 @@ export default function Layout(props) {
 	let sPath = path.slice(1)
 
 	return (<div className="flex flex-nowrap">
-		<div className="h-screen bg-slate-700 w-80 flex flex-col p-8 gap-4">
+		<aside className="menu h-screen w-80 flex flex-col p-8 gap-4">
 			<a className="menu-link" href="/">
 				Layout
 			</a>
@@ -63,8 +63,8 @@ export default function Layout(props) {
 
 			<Outlet /> */}
 
-		</div>
-		<div className="">
+		</aside>
+		<div className="flex w-100 h-screen justify-center flex-center">
 			<Container>
 				<Outlet/>
 			</Container>
