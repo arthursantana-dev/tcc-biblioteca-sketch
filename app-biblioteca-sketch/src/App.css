@@ -17,6 +17,16 @@ body {
   font-family: 'Figtree', sans-serif;
 }
 
+a.menu-link{
+  color: var(--white-bg);
+  font-size: 1.2rem;
+}
+
+a.menu-link--active{
+  color: var(--input-font-color);
+}
+
+
 .button {
   width: fit-content;
 }

@@ -1,20 +1,36 @@
 import { BrowserRouter, Outlet, Route, useLocation } from "react-router-dom";
 import Button from "./Button";
 import Input from "./Input";
-import {useState} from 'react';
+import { useState } from 'react';
 import Container from "./Container";
+
 
 export default function Layout(props) {
 	const [value, setValue] = useState("")
-	const {setPath} = {...props}
+	const { setPath, path} = { ...props }
+
 	setPath(useLocation().pathname)
-	console.log(useLocation().pathname)
-	return (
-		<div className="flex flex">
-			<Container>
+
+	let sPath = path.slice(1)
+
+	return (<div className="flex flex-nowrap justify-between">
+		<div className="h-screen bg-slate-700 w-80 flex flex-col p-8 gap-4">
+			<a className="menu-link" href="/">
+				Layout
+			</a>
+			<a className={`menu-link ${sPath == "login" ? "menu-link--active" : ""}`} href="/login">
+				Login
+			</a>
+			<a className="menu-link" href="/config">
+				config
+			</a>
+			{/* <Container>
 				<h1>Layout</h1>
 				<a href="/login">
 					Login
+				</a>
+				<a href="/config">
+					config
 				</a>
 				<Input setValue={setValue}/>
 				<Button title={"yeepee"} onClick={() => console.log('yepee')}/>
@@ -24,11 +40,33 @@ export default function Layout(props) {
 						Hello
 					</p>
 				</Container>
-			</Container>
+			</Container> */}
 
 
-			<Outlet/>
-			
+
+
+
+			{/* <a href="/">
+				Layout
+			</a><hr/>
+			<a href="/login">
+				Login
+			</a><hr/>
+			<a href="/config">
+				config
+			</a>
+
+			<hr/>
+
+			<p>Path: {path}</p>
+
+
+			<Outlet /> */}
+
 		</div>
+		<Container>
+			<Outlet/>
+		</Container>
+	</div>
 	)
 }
